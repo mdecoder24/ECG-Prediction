@@ -1,0 +1,39 @@
+
+<div class=" container text-center text-danger " style="margin-top:80px">
+<h1>Total <%= ptotal %> Predictions !</h1>
+</div>
+
+<div class="container mt-3" >
+    <div class="row">
+        <table class="text-center shadow-sm my-2 table table-hover">
+            <thead class="bg-danger-subtle">
+                <tr class="text-danger-emphasis py-3">
+                    <th>#</th>
+                    <th>Image</th>
+                    <th>Username</th>
+                    <th>Role</th>
+                    <th>Email</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody class="text-danger">
+                <% allp.forEach((pred,index) => { %>
+                    <tr class="py-3 text-<%= pred.role=='User'?'success':'primary'%>">
+                        <td><h6><%= index+1 %></h6></td>
+                        <td><img src="img/ECG/<%= pred.image %>" alt="" width="50px" class="rounded shadow-sm img-thumbnail"></td>
+                        <td><h6><%= pred.by %></h6></td>
+                        <td><h6><%= pred.role %></h6></td>
+                        <td><h6><%= pred.email %></h6></td>
+                        <td><h6><%= pred.result %></h6></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+            <tfoot class="bg-danger-subtle">
+                    <tr>
+                        <th colspan="8">                   
+                        </th>
+                    </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>

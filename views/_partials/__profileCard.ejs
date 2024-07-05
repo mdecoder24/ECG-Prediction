@@ -1,0 +1,69 @@
+
+<div id="profileform" class="my-5">
+    <div id="profilehead" class="text-center mb-3">
+        <h1 class="text-danger"><%= auth.userEmail %>'s Profile !</h1>
+    </div>
+    <form action="/profile" method="post" enctype="multipart/form-data">
+        <div class="container">
+            <div class="card border-danger border-opacity-50">
+                <div class="card-title border-danger text-center my-3">
+                    <img src="img/app/cardio.png" class="rounded-5" width="100px">
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div>
+                            <input type="text" value="<%= auth.userId %>" name="id" hidden> 
+                            <input type="text" value="<%= auth.userEmail %>" name="email" hidden> 
+                            <input type="text" value="<%= auth.userRole %>" name="role" hidden> 
+                        </div>
+                        <div class="col">
+                            <label for="exampleFormControlInput1" class="form-label text-danger"><b>First Name</b></label>
+                        <input type="text" name="fname" class="form-control text-danger" id="exampleFormControlInput1" placeholder="ex: Monkey D" required>
+                        </div>
+                        <div class="col">
+                            <label for="exampleFormControlInput1" class="form-label text-danger"><b>Second Name</b></label>
+                        <input type="text" name="sname" class="form-control text-danger" id="exampleFormControlInput1" placeholder="ex: Luffy" required>
+                        </div>
+                    </div>   
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label text-danger"><b>Gender</b></label>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault" value="male" checked>
+                                    <label class="form-check-label text-danger" for="flexRadioDefault1">
+                                      <b>Male</b>
+                                    </label>
+                                  </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault" value="female">
+                                    <label class="form-check-label text-danger" for="flexRadioDefault2">
+                                      <b>Female</b>
+                                    </label>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label text-danger"><b>Profession</b></label>
+                        <select class="form-select" aria-label="Default select example" name="profession">
+                            <option value="Student" selected>Student</option>
+                            <option value="Doctor">Doctor</option>
+                            <option value="Hospital">Hospital</option>
+                            <option value="Others">Others</option>
+                          </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label text-danger"><b>Select Profile Picture</b></label>
+                        <input class="form-control" type="file" id="formFile" name="profile">
+                    </div>          
+                </div>
+                <div class="card-footer text-center border-0 bg-transparent mb-3">
+                    <button class="btn btn-danger"> Submit </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

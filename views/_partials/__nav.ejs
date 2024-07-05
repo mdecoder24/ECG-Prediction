@@ -1,0 +1,57 @@
+
+<nav class="navbar sticky-top bg-danger-subtle z-1 position-absolute">
+    <nav class="navbar bg-danger-subtle fixed-top">
+        <div class="container-fluid text-center">
+          <a class="navbar-brand ms-3" href="/"><img src="img/app/cardio.png" alt="logo" width="30px"></a><h3 class="text-danger">Cardiovascular Disease Prediction using ECG Image .</h3>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title text-danger" id="offcanvasNavbarLabel">ECG | Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <% if (profile) { %>
+              <div id="profile">
+                <img src="img/uploads/<%= profile.image %>" class="rounded-5 mb-2" width="100px">
+                <p class="text-danger"><b><%= profile.fname %> <%= profile.sname %></b></p>
+              </div>
+            <% } %>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/">Home</a>
+                </li>
+                <% if (auth) { %>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/updateprofile"> Profile </a>
+                  </li>
+                  <% if (auth.userRole == 'Admin') { %>
+                    <li class="nav-item">
+                       <a class="nav-link" aria-current="page" href="/admin">Admin Panel</a>
+                     </li>
+                   <% } %>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="/history?email=<%= auth.userEmail %>">History</a>
+                    </li>
+                  <% if (auth.userRole != 'User') { %>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="/ip">Image Pre-Processing</a>
+                    </li>
+                  <% } %>
+                  
+                <% } %>
+              </ul>
+              <% if (!auth) { %>
+                <a href="/login" class="btn btn-danger fixed-bottom position-absolute my-5 mx-5"> Login </a>
+              <% } else {%>
+                <form action="/logout" method="post">
+                  <button class="btn btn-danger fixed-bottom position-absolute my-5 mx-5" type="submit"> Logout </button>
+                </form>
+              <% } %>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+</nav>

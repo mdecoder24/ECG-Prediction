@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="container mb-3" id="history">
+        <h1 class="text-center text-primary my-3">Prediction History <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><g transform="rotate(90 12 12)"><path fill="blue" d="m18.9 20.3l-5.6-5.6q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l5.625 5.625q.275.275.275.675t-.3.7q-.275.275-.7.275t-.7-.275ZM9.5 14q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z"/></g></svg></h1>
+<h5 class="text-danger text-center mb-3">Total <%= hcount %> Predictions Found !</h5>
+    </div>
+
+    <% if (hcount == 0) { %>
+        <div class="container bg-danger-subtle mt-3 rounded text-center py-5 px-5">
+            <div class="box border-danger rounded py-5 px-5 border-opacity-50" style="border-style: dashed;">
+                <h1 class="text-danger">Sorry ! No Prediction History found.</h1>
+            </div>
+        </div>
+    <% } %>
+       
+    <% if (History) { %>
+    <div class="container">
+        <div class="row">
+            <% History.forEach((history,index) => { %>
+            <div class="col col-lg-4">   
+                <div class="card border-danger mt-3">
+            <div class="card-header text-center border-danger bg-danger-subtle">
+                <h4>
+                    <h4 class="text-danger"><%= history.by %></h4>
+                                
+                <% if (auth.userRole == 'Dr') { %>
+                    <a href="/delete/<%= history._id %>"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="red" d="M7 21q-.825 0-1.413-.588T5 19V6q-.425 0-.713-.288T4 5q0-.425.288-.713T5 4h4q0-.425.288-.713T10 3h4q.425 0 .713.288T15 4h4q.425 0 .713.288T20 5q0 .425-.288.713T19 6v13q0 .825-.588 1.413T17 21H7Zm2-5q0 .425.288.713T10 17q.425 0 .713-.288T11 16V9q0-.425-.288-.713T10 8q-.425 0-.713.288T9 9v7Zm4 0q0 .425.288.713T14 17q.425 0 .713-.288T15 16V9q0-.425-.288-.713T14 8q-.425 0-.713.288T13 9v7Z"/></svg></a>
+                <% } %>
+                </h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col col-lg-6">
+                        <img src="img/ECG/<%= history.image %>" width="200px">
+                    </div>
+                    <div class="col col-lg-6 text-center">
+                        <small>
+                            <p class="text-primary"><b><%= history.uploadedOn %></b></p>
+                            <% if (auth.userRole == 'Dr') { %>
+                                <h6 class="text-danger"><b><%= history.pname %></b></h6>
+                            <% } %>
+                            <h6 class="text-success"><%= history.result %></h6>
+                        </small>
+                    </div>
+                </div>
+            </div>
+                </div>   
+            </div>
+            <% }) %>
+        </div>
+    </div>
+
+    <% } %>  
+</div> 

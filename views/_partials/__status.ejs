@@ -1,0 +1,43 @@
+
+<div class="container text-center " style="margin-top: 80px;">
+    <div class="container-fluid bg-danger-subtle text-danger rounded py-1">
+        <h1>Admin Dashboard</h1>
+    </div>
+</div>
+<div class="container mb-3 mt-5" >
+    <div class="row">
+        <div class="col">
+            <div class="card shadow-sm text-center border-0 rounded bg-danger-subtle text-danger-emphasis">
+                <a href="/allprofile?all=User" class="stretched-link"></a>
+                <div class="card-title my-2">
+                    <h5 class="my-1">Total Users</h5>
+                </div>
+                <div class="card-body text-center">
+                    <td><h2><%= ucount %></h2></td>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm text-center border-0 rounded bg-danger-subtle text-danger-emphasis">
+                <a href="/allprofile?all=Dr" class="stretched-link"></a>
+                <div class="card-title my-2">
+                    <h5 class="my-1">Total Doctors</h5>
+                </div>
+                <div class="card-body text-center">
+                    <td><h2><%= dcount %></h2></td>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm text-center border-0 rounded bg-warning-subtle text-primary-emphasis">
+                <a href="/allprofile" class="stretched-link"></a>
+                <div class="card-title my-2">
+                    <h5 class="my-1">Total Profiles</h5>
+                </div>
+                <div class="card-body text-center">
+                    <td><h2><%= tusers %></h2></td>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

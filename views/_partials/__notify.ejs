@@ -1,0 +1,17 @@
+<% if (notify) { %>
+  <div class="container shadow-lg z-2">
+    <div class="animate__animated animate__fadeInRight alert alert-<%= notify.type %> alert-dismissible fade show rounded-4 border border-<%= notify.type %> shadow-sm" role="alert" style="width: 300px;position: absolute;right: 0;top: 0;margin-top: 10px;margin-right: 10px;z-index: 1;">
+      <div class="row"> 
+          <div class="col col-sm-3 text-center">
+              <img src="img/app/cardio.png" width="30px" height="30px" class="mt-2">
+          </div>
+          <div class="col text-center">
+              <p class="mt-2 text-center"><%= notify.msg %> <a href="/<%= notify.link %>" class="link-<%= notify.type %>"><%= notify.link %></a> <%= notify.emoji %></p>
+          </div>
+        </div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert"aria-label="Close"></button>
+    </div>
+  </div>
+<% } %>
+
+

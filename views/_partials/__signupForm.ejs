@@ -1,0 +1,45 @@
+<div id="signupform" class="my-5">
+    <div id="signuphead" class="text-center mb-3">
+        <h1 class="text-danger">Signup !</h1>
+    </div>
+    <form action="/signup" method="post">
+        <div class="container my-5">
+            <div id="signupbody" class="card-body pt-5 px-5 mx-auto shadow-sm border border-1 rounded-2 border-danger border-opacity-50">
+
+                    <!-- <div class="row g-3 mb-3">
+                        <div class="col">
+                            <label for="exampleFormControlInput1" class="form-label text-danger"><b>First Name</b></label>
+                            <input type="text" class="form-control text-danger" id="exampleFormControlInput1" placeholder="first name" required>
+                        </div>
+                        <div class="col">
+                            <label for="exampleFormControlInput1" class="form-label text-danger"><b>Second Name</b></label>
+                            <input type="text" class="form-control text-danger" id="exampleFormControlInput1" placeholder="Second name" required>
+                        </div>
+                    </div> -->
+
+                    <div class="mb-3 mt-3">
+                        <label for="exampleFormControlInput1" class="form-label text-danger"><b>Email address</b></label>
+                        <input type="email" name="email" class="form-control text-danger" id="exampleFormControlInput1" placeholder="yours@gmail.com" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label text-danger"><b>Password</b></label>
+                        <input type="password" name="pass" class="form-control" id="exampleFormControlInput1" placeholder="example@1" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label text-danger"><b>Confirm Password</b></label>
+                        <input type="password" name="cpass" class="form-control" id="exampleFormControlInput1" placeholder="example@1" required>
+                    </div>
+
+                    <div id="loginfoot" class="d-flex justify-content-center mt-5 mb-3">
+                        <button class="btn bg-danger-subtle text-danger-emphasis"> Sign Up </button>
+                    </div>
+                    <div class="container text-center mb-3">
+                        <p class="text-danger-emphasis"> Existing User ? <a href="/login" class="link-danger" >LogIn here !</a></p>
+                    </div>
+
+            </div>
+        </div>
+    </form>
+</div>

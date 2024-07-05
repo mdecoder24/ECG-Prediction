@@ -1,0 +1,101 @@
+
+#loginbody{
+    width:75%;
+}
+
+#signupbody{
+    width:75%;
+}
+
+
+
+#loginbody input:focus{
+    border-color: #dc3545;
+    box-shadow: 0 0 10px #dc3545;
+    opacity: 50%;
+    font-weight: bolder;
+}
+
+#signupbody input::-webkit-input-placeholder{
+    color: #dc3545;
+}
+#loginbody input::-webkit-input-placeholder{
+    color: #dc3545;
+}
+
+.card-body input{
+    border-color: #dc3545;
+}
+
+.card-body select{
+    border-color: #dc3545;
+}
+
+.card-body input:focus{
+    border-color: #dc3545;
+    box-shadow: 0 0 10px #dc3545;
+    opacity: 50%;
+    font-weight: bolder;
+}
+
+.card-body input::-webkit-input-placeholder{
+    color: #dc3545;
+}
+
+.card-body select:focus{
+    border-color: #dc3545;
+    box-shadow: 0 0 10px #dc3545;
+    opacity: 50%;
+    font-weight: bolder;
+}
+
+.card-body select{
+    color:#dc3545 ;
+}
+
+.card-body input[type=file]::-webkit-file-upload-button {
+    background: #dc3545;
+    opacity: 80%;
+    color: white;
+    transition: 2s;
+}
+
+.card-body input[type=file]{
+    color: #dc3545;
+}
+
+.card-body input[type=radio]{
+    color:#dc3545 ;
+    background-color: #dc3545;
+    border: none;
+}
+
+.card-body input[type=radio]:focus{
+    color:#dc3545 ;
+    border: none;
+}
+
+#predict{
+    margin-top: 100px;
+}
+
+#history{
+    margin-top: 100px;
+}
+
+#index input::file-selector-button {
+    display: none;
+}
+
+#ecgfile:hover{
+    cursor: pointer;
+}
+
+#pname:focus{
+    border-color: #dc3545;
+    box-shadow: 0 0 6px #dc3545;
+    opacity: 50%;
+    font-weight: bolder;
+}
+
+

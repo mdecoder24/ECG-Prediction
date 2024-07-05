@@ -1,0 +1,30 @@
+<%- include('_partials/__header') %>
+<%- include('_partials/__nav') %>
+<%- include('_partials/__notify') %>
+
+<div class="container " id="predict">
+        <form action="/" method="post" enctype="multipart/form-data" id="index">
+            <div class="card py-5 px-5 bg-danger-subtle border-0 text-center shadow-sm">
+                <h4 class="text-center mb-5" ><label for="ecg">Drag & Drop or <b class="text-danger" id="ecgfile">Browse</b></label></h4>
+                <input type="file" name="ecg" class="px-5 py-5 rounded" style="border: 2px dashed #dc3545;" id="ecg" required>
+            </div>
+            <% if (auth) { %>
+                <% if (auth.userRole == 'Dr') { %>
+                    <div class="container d-flex text-align-center justify-content-center">
+                        <div class="input-group mt-3" style="width: 500px;">
+                        <span class="input-group-text bg-danger-subtle">Enter Patient Name</span>
+                        <input type="text" aria-label="First name" class="form-control" name="pname" id="pname">
+                    </div>
+                </div>
+                <% } %>
+            <% } %>
+            <div class="container d-flex text-align-center justify-content-center py-3">
+                <input type="submit" value=" Analyse & Predict " class="btn btn-danger">
+                <input type="reset" value=" Reset " class="btn btn-warning mx-3">
+            </div>
+        </form>
+</div>
+
+<%- include('_partials/__rescard') %>
+<%- include('_partials/__foot') %>
+<%- include('_partials/__footer') %>

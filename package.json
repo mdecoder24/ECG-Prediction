@@ -1,0 +1,42 @@
+{
+  "name": "ecg",
+  "version": "1.0.0",
+  "description": "cardiovascular disease prediction using ecg image. ML project.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheNandan/ECG.git"
+  },
+  "keywords": [
+    "Machine"
+  ],
+  "author": "Nandan S",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheNandan/ECG/issues"
+  },
+  "homepage": "https://github.com/TheNandan/ECG#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.0-alpha2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jquery": "^3.6.4",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1"
+  }
+}

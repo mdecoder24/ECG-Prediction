@@ -1,0 +1,33 @@
+<%- include('_partials/__header') %>
+
+
+<div class="container text-center bg-danger-subtle mt-3 border border-danger-subtle rounded" id="error">
+    <h1 style="font-size: 500px;" class="text-danger-emphasis">404</h1>
+</div>
+
+<div class="container text-center">
+    <div class="mt-2">
+        <h5 class="text-info">Opps! Someting Went Wrong.</h5>
+    <h6 class="text-danger-emphasis">Please wait for <span id="Tsec" class="text-info-emphasis">0.00</span> sec . you will be redirected !</h6>
+    </div>
+</div>
+
+<script>
+    const timeH = document.getElementById('Tsec')
+    let tsec = 5
+
+    timeH.innerHTML = `0.${tsec}`
+    const countDown = function(){
+        if( tsec <= 0){
+        clearInterval(tsec)
+        document.location.href = '/'
+
+    }else{
+        tsec--
+        timeH.innerHTML = `0:${tsec}`
+    }
+        
+    }
+    setInterval(countDown,1000)
+</script>
+<%- include('_partials/__footer') %>

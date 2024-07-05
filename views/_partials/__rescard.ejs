@@ -1,0 +1,32 @@
+<% if (result) { %>
+    <div class="container shadow-lg z-2">
+        <div class="card position-absolute animate__animated animate__backInDown alert alert-<%= result.type %> alert-dismissible fade show"  role="alert" style="width:85%;height:80%;z-index: 1;top:0;margin-top:80px;">
+        <div class="card-body">
+            <div class="card-title text-center ">
+                <% if (result.pname) { %>
+                 <h1>
+                    <strong>Patient Name : <%= result.pname %></strong>
+                </h1>
+                <% } else {%>
+                <h1>
+                    <strong>Prediction !</strong>
+                </h1>
+                <% } %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+            <div class="row ">
+                <div class="col col-lg-6">
+                    <img src="img/app/cardio.png">
+                </div>
+                <div class="col col-lg-6 py-5 my-5">
+                    <h1 class="my-5 py-5 px-5"><strong class="my-5 mx-5"><%= result.msg %></strong></h1>
+                </div>
+            </div>
+        </div>
+  
+</div>
+    </div>
+<% } %>
+
+
+

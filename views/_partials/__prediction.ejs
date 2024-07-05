@@ -1,0 +1,64 @@
+<div class="container text-center " style="margin-top: 80px;">
+    <div class="container-fluid bg-danger-subtle text-danger rounded py-1">
+        <h1>Prediction History Count according to Catogery</h1>
+    </div>
+</div>
+
+<div class="container mb-3 mt-5" >
+    <div class="row">
+        <div class="col">
+            <div class="card shadow-sm text-center border-0 rounded bg-danger-subtle text-danger-emphasis">
+                <div class="card-title my-2">
+                    <h5 class="my-1">Myocardial Infarction</h5>
+                </div>
+                <div class="card-body text-center">
+                    <td><h2><%= miCount %></h2></td>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm text-center border-0 rounded bg-danger-subtle text-danger-emphasis">
+                <div class="card-title my-2">
+                    <h5 class="my-1">Abnormal Heartbeat</h5>
+                </div>
+                <div class="card-body text-center">
+                    <td><h2><%= abCount %></h2></td>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm text-center border-0 rounded bg-primary-subtle text-primary-emphasis">
+                <div class="card-title my-2">
+                    <h5 class="my-1">History of MI</h5>
+                </div>
+                <div class="card-body text-center">
+                    <td><h2><%= hmiCount %></h2></td>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm text-center border-0 rounded bg-success-subtle text-warning-emphasis">
+                <a href="/history" class="stretched-link"></a>
+                <div class="card-title my-2">
+                    <h5 class="my-1">Normal</h5>
+                </div>
+                <div class="card-body">
+                    <h2><%= ncount %></h2>
+                </div>
+            
+            </div>
+    </div>
+    <div class="col">
+            <div class="card shadow-sm text-center border-0 rounded bg-warning-subtle text-warning-emphasis">
+                <a href="/allprediction" class="stretched-link"></a>
+                <div class="card-title my-2">
+                    <h5 class="my-1">Total Prediction</h5>
+                </div>
+                <div class="card-body">
+                    <h2><%= thist %></h2>
+                </div>
+            
+            </div>
+    </div>
+    </div>
+</div>
